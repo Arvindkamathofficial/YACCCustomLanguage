@@ -1,7 +1,9 @@
 %{
-    #include <stdio.h>
-	#include <stdlib.h>
-	extern FILE* yyin;
+#include <stdio.h>
+#include <stdlib.h>
+int yylex();
+int yyerror();
+extern FILE* yyin;
 %}
 
 %token SPACE MAIN LEFT LEFT_PARENTHESIS RIGHT_PARENTHESIS NEWLINE BEGINTOKEN ENDTOKEN INT TAB IDENTIFIER COMMA SEMICOLON IF RELOP FOR NUMBER UNARY_OPERATOR ASSIGNMENT_OPERATOR
