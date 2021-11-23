@@ -16,10 +16,10 @@
 [;] { return SEMICOLON; }
 [a-zA-Z][a-zA-Z0-9_]* { return IDENTIFIER; }
 [0-9]+ { return NUMBER; }
-"(" { return LEFT_PARENTHESIS;}
-")" { return RIGHT_PARENTHESIS;}
+"(" { return LEFT_PARENTHESIS; }
+")" { return RIGHT_PARENTHESIS; }
 "<"|">"|"<="|">="|"!="|"==" { return RELOP; }
-"++"|"--" {return UNARY_OPERATOR;}
+"++"|"--" { return UNARY_OPERATOR; }
 [\t] { return TAB; }
 [,] { return COMMA; }
 . { return yytext[0]; }
