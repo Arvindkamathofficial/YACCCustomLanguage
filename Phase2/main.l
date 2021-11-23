@@ -14,7 +14,7 @@
 "end" { return ENDTOKEN; }
 "int" { return INT; }
 [;] { return SEMICOLON; }
-[a-zA-Z_][a-zA-Z0-9_]* { return IDENTIFIER; }
+[a-zA-Z][a-zA-Z0-9_]* { return IDENTIFIER; }
 [0-9]+ { return NUMBER; }
 "(" { return LEFT_PARENTHESIS;}
 ")" { return RIGHT_PARENTHESIS;}
