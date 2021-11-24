@@ -2,3 +2,5 @@
 *.png
 *.output
 *.dot
+*.c
+*.h
