@@ -19,7 +19,7 @@ $ sh <name_of_the_phase>.sh
 *Self-explanatory, therefore skipped. Try playing with the code, if you are not familiar.*
 
 ## Phase 2:
-You're recommended to mody only **main.y**, **main.l** and **valid_code.lang**.
+You're recommended to modify only **main.y**, **main.l** and **valid_code.lang**.
 
 The `%%...%%` part in **main.y** contains your grammar. Make sure to look into the code I've provided - the file name is **main.y** (the problem statement can be accessed in **valid_code.lang** - here, you can place your own problem statement to be executed), and modify the grammar as per your requirements. Be sure to assign all the tokens inside the **main.l** code.
 
