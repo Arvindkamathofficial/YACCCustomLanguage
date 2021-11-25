@@ -1,5 +1,5 @@
 cd Phase2/
-bison -d --report=all --graph main.y
+bison -d --report=itemsets -t --graph main.y
 flex main.l
 gcc lex.yy.c main.tab.c -ll
 ./a.out ../valid_code.lang
