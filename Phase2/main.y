@@ -11,9 +11,9 @@ char symbol[100][100];
 %token SPACE MAIN LEFT LEFT_PARENTHESIS RIGHT_PARENTHESIS NEWLINE BEGINTOKEN ENDTOKEN INT TAB IDENTIFIER COMMA SEMICOLON IF RELOP FOR NUMBER UNARY_OPERATOR ASSIGNMENT_OPERATOR
 
 %%
-function: type SPACE MAIN LEFT_PARENTHESIS RIGHT_PARENTHESIS NEWLINE BEGINTOKEN NEWLINE body NEWLINE ENDTOKEN NEWLINE { printf("Valid\n"); exit(0); };
+function: type SPACE MAIN LEFT_PARENTHESIS RIGHT_PARENTHESIS NEWLINE BEGINTOKEN body ENDTOKEN NEWLINE { printf("Valid grammar\n"); exit(0); };
 
-body: declaration_statement NEWLINE if_statement NEWLINE for_statement;
+body: NEWLINE declaration_statement body|NEWLINE if_statement body|NEWLINE for_statement body|NEWLINE;
 
 declaration_statement: tabspace type SPACE identifier_list SEMICOLON;
 
@@ -36,10 +36,11 @@ tabspace: TAB tabspace|SPACE tabspace|;
 type: INT;
 %%
 
-int yyerror(char* msg) { printf("Invalid declaration\n"); exit(0); }
+int yyerror(char* msg) { printf("Invalid language\n"); exit(0); }
 
 void main(int argc, char *argv[])
 {
+	yydebug=1;
 	yyin=fopen(argv[1],"r");
 	yyparse();
 }
