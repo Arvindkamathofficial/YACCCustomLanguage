@@ -1,7 +1,7 @@
 # YACC Custom Language
 We will be using Flex and Bison - they're both almost identical to Lex and Yacc (including the flags!)
 
-> Warning: Please use an Unix environment. This was tried on Fedora 35, but should work with no problem in any other similar Unix OSes. I provide any assistance for Windows, be it MinGW or WSL2.
+> Warning: Please use an Unix environment. This was tried on Fedora 35, but should work with no problem in any other similar Unix OSes. I cannot provide any assistance for Windows, be it MinGW or WSL2.
 
 Dependencies:
 1. Flex (both *base* and *devel*)
